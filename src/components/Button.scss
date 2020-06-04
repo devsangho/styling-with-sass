@@ -30,13 +30,17 @@ $blue: #228be6;
         padding-left: 1rem;
         font-size: 1rem;
     }
-    
+
     background: $blue;
     &:hover {
         background: lighten($blue, 10%); // 색상 10% 밝게
     }
 
     &:active {
-        background: darken($color: ($blue), $amount: 10%);
+        background: darken($color: ($blue), $amount: 10%); // 색상 10% 어둡게
+    }
+
+    & + & {
+        margin-left: 1rem;
     }
 }
