@@ -1,4 +1,6 @@
 $blue: #228be6;
+$gray: #495057;
+$pink: #f06595;
 
 .Button {
     display: inline-flex;
@@ -31,14 +33,40 @@ $blue: #228be6;
         font-size: 1rem;
     }
 
-    background: $blue;
-    &:hover {
-        background: lighten($blue, 10%); // 색상 10% 밝게
+    &.blue {
+        background: $blue;
+        &:hover {
+            background: lighten($color: blue, $amount: 10%);
+        }
+
+        &:active {
+            background: darken($color: blue, $amount: 10%);
+        }
     }
 
-    &:active {
-        background: darken($color: ($blue), $amount: 10%); // 색상 10% 어둡게
+    &.gray {
+        background: $gray;
+        &:hover {
+            background: lighten($color: gray, $amount: 10%);
+        }
+
+        &:active {
+            background: darken($color: gray, $amount: 10%);
+        }
     }
+
+    &.pink {
+        background: $pink;
+        &:hover {
+            background: lighten($color: pink, $amount: 10%);
+        }
+
+        &:active {
+            background: darken($color: pink, $amount: 10%);
+        }
+    }
+
+    background: $blue;
 
     & + & {
         margin-left: 1rem;
